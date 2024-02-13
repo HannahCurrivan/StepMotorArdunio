@@ -5,4 +5,7 @@ The following code is combining the step motor function and retrieving data from
 
 After going through a number of versions to ultimately land on a Arduino script that works best for the Heisenberg Uncertainty Prinple experimental setup. 
 
-
+It begins with including an outside library called "Stepper.h>.
+```python
+#include <Stepper.h>
+```

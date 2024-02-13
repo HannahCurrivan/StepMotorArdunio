@@ -3,6 +3,7 @@ A very simple Ardunio code to move a step motor and take resistance readings.
 The following code is combining the step motor function and retrieving data from the photoresister. This leads to two outputs the distance travelled along a rail and the resistance from the photoresister.
 
 
+
 After going through a number of versions to ultimately land on a Arduino script that works best for the Heisenberg Uncertainty Prinple experimental setup. 
 
 It begins with including an outside library called "Stepper.h>.
@@ -51,5 +52,28 @@ void loop() {
   totalDistanceMM += distanceTraveledMM; // Update total distance
 ```
 
-The photoresistor 
+The photoresistor is connected to the analog pin 0 on the Ardunio. The script converts the analog reading to a voltage, and then calculates the resistance.
+```python
+
+  // Read the input on analog pin 0 (you'll need to connect a resistor or sensor):
+  int sensorValue = analogRead(A0);
+  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  float voltage = sensorValue * (5.0 / 1024.0);
+  // Calculate resistance (assuming a fixed resistor):
+  float resistance = (5.0 * 4700.0) / (5.0 - voltage); // Corrected formula
+```
+
+Finally the print out is provided.
+```python
+
+  // Print out the value you read:
+  Serial.print("Distance traveled: ");
+  Serial.print(totalDistanceMM, 2); // Display distance with 2 decimal places
+  Serial.print(" mm | Resistance: ");
+  Serial.print(resistance, 2); // Display resistance with 2 decimal places
+  Serial.println(" Ohms");
+}
+```
+
+The data can then be copied from the Ardunio stream to an excel using special paste text import wizard. 
 

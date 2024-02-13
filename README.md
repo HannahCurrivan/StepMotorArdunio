@@ -12,6 +12,7 @@ Basic simulation layout of electronics.
 
 Schematic diagram of experiments electronics.
 
+## Explanation of Ardunio code
 
 After going through a number of versions to ultimately land on a Arduino script that works best for the Heisenberg Uncertainty Prinple experimental setup. 
 

@@ -3,7 +3,7 @@ A very simple Ardunio code to move a step motor and take resistance readings.
 The following code is combining the step motor function and retrieving data from the photoresister. This leads to two outputs the distance travelled along a rail and the resistance from the photoresister.
 
 
-![alt text](https://github.com/HannahCurrivan/StepMotorArdunio/blob/main/simulation_diagram.png)
+![alt text](https://github.com/HannahCurrivan/StepMotorArdunio/blob/main/Simulation_Update.png)
 
 Basic simulation layout of electronics. 
 
